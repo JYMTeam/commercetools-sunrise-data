@@ -1,6 +1,6 @@
 [{
-    "name": "Standard EU",
-    "key": "std-EU",
+    "name": "Standard DeutschePost",
+    "key": "std-DP",
     "localizedDescription": {
         "en":"Delivery in 5-6 working days",
         "de":"Lieferung in 5-6 Werktagen"
@@ -33,35 +33,6 @@
     "isDefault": true
 },
 {
-    "name": "Express EU",
-    "key": "express-EU",
-    "localizedDescription": {
-        "en":"Same day delivery",
-        "de":"Lieferung am selben Tag"
-    },
-    "taxCategory": {
-        "typeId": "tax-category",
-        "id": "EU"
-    },
-    "zoneRates": [
-        {
-            "zone": {
-                "typeId": "zone",
-                "id": "Europe"
-            },
-            "shippingRates": [
-                {
-                    "price": {
-                        "currencyCode": "EUR",
-                        "centAmount": 1000
-                    },
-                    "tiers": []
-                }
-            ]
-        }
-    ],
-    "isDefault": false
-},{
     "name": "Standard US",
     "key": "std-US",
     "localizedDescription": {
@@ -94,34 +65,5 @@
         }
     ],
     "isDefault": false
-},
-{
-    "name": "Express US",
-    "key": "express-US",
-    "localizedDescription": {
-        "en":"Same day delivery",
-        "de":"Lieferung am selben Tag"
-    },
-    "taxCategory": {
-        "typeId": "tax-category",
-        "id": 1
-    },
-    "zoneRates": [
-        {
-            "zone": {
-                "typeId": "zone",
-                "id": "United States"
-            },
-            "shippingRates": [
-                {
-                    "price": {
-                        "currencyCode": "USD",
-                        "centAmount": 1000
-                    },
-                    "tiers": []
-                }
-            ]
-        }
-    ],
-    "isDefault": false
-}]
+}
+]
