@@ -5,14 +5,16 @@
     "description": "Bags Data Set Structure",
     "attributes": [
       {
-        "name": "creationDate",
-        "label": {
-          "en": "Date of Creation",
-          "de": "Erstelldatum"
+        "name": "short-description",
+        "label":  {
+          "en": "short-description"
         },
         "isRequired": false,
         "type": {
-          "name": "datetime"
+          "name": "set",
+          "elementType": {
+            "name": "text"
+          }
         },
         "attributeConstraint": "None",
         "isSearchable": true,
@@ -20,14 +22,16 @@
         "displayGroup": "Other"
       },
       {
-        "name": "articleNumberManufacturer",
-        "label": {
-          "de": "Herstellernummer",
-          "en": "Manufacturer AID"
+        "name": "long-description",
+        "label":  {
+          "en": "long-description"
         },
         "isRequired": false,
         "type": {
-          "name": "text"
+          "name": "set",
+          "elementType": {
+            "name": "text"
+          }
         },
         "attributeConstraint": "None",
         "isSearchable": true,
@@ -35,14 +39,50 @@
         "displayGroup": "Other"
       },
       {
-        "name": "articleNumberMax",
+        "name": "designer",
         "label": {
-          "en": "AID Maximilian",
-          "de": "Artikelnummer Maximilian"
+          "en": "Designer"
         },
         "isRequired": false,
         "type": {
-          "name": "text"
+          "name": "set",
+          "elementType": {
+            "name": "enum",
+            "values": [
+              {
+                "key": "Balenciaga",
+                "label": "Balenciaga"
+              },
+              {
+                "key": "Bogner",
+                "label": "Bogner"
+              },
+              {
+                "key": "Celine",
+                "label": "Celine"
+              },
+              {
+                "key": "Prada",
+                "label": "Prada"
+              },
+              {
+                "key": "Fendi",
+                "label": "Fendi"
+              },
+              {
+                "key": "Gucci",
+                "label": "Gucci"
+              },
+              {
+                "key": "Louis-Vuitton",
+                "label": "Louis Vuitton"
+              },
+              {
+                "key": "Loewe",
+                "label": "Loewe"
+              }
+            ]
+          }
         },
         "attributeConstraint": "None",
         "isSearchable": true,
@@ -50,29 +90,30 @@
         "displayGroup": "Other"
       },
       {
-        "name": "matrixId",
+        "name": "size-list",
         "label": {
-          "de": "Matrix ID",
-          "en": "Matrix ID"
+          "en":"size-list"
         },
         "isRequired": false,
         "type": {
-          "name": "text"
-        },
-        "attributeConstraint": "Unique",
-        "isSearchable": true,
-        "inputHint": "SingleLine",
-        "displayGroup": "Other"
-      },
-      {
-        "name": "baseId",
-        "label": {
-          "de": "BasisID",
-          "en": "BaseID"
-        },
-        "isRequired": true,
-        "type": {
-          "name": "text"
+          "name": "set",
+          "elementType": {
+            "name": "enum",
+            "values": [
+              {
+                "key": "small",
+                "label": "small"
+              },
+              {
+                "key": "medium",
+                "label": "medium"
+              },
+              {
+                "key": "big",
+                "label": "big"
+              }
+            ]
+          }
         },
         "attributeConstraint": "None",
         "isSearchable": true,
@@ -82,229 +123,30 @@
       {
         "name": "color",
         "label": {
-          "de": "Filterfarbe",
-          "en": "Filtercolor"
-        },
-        "isRequired": false,
-        "type": {
-          "name": "lenum",
-          "values": [
-            {
-              "key": "black",
-              "label": {
-                "en": "black",
-                "de": "schwarz"
-              }
-            },
-            {
-              "key": "grey",
-              "label": {
-                "de": "grau",
-                "en": "grey"
-              }
-            },
-            {
-              "key": "beige",
-              "label": {
-                "de": "beige",
-                "en": "beige"
-              }
-            },
-            {
-              "key": "white",
-              "label": {
-                "de": "weiss",
-                "en": "white"
-              }
-            },
-            {
-              "key": "blue",
-              "label": {
-                "de": "blau",
-                "en": "blue"
-              }
-            },
-            {
-              "key": "brown",
-              "label": {
-                "de": "braun",
-                "en": "brown"
-              }
-            },
-            {
-              "key": "turquoise",
-              "label": {
-                "de": "türkis",
-                "en": "turquoise"
-              }
-            },
-            {
-              "key": "petrol",
-              "label": {
-                "en": "petrol",
-                "de": "petrol"
-              }
-            },
-            {
-              "key": "green",
-              "label": {
-                "en": "green",
-                "de": "grün"
-              }
-            },
-            {
-              "key": "red",
-              "label": {
-                "en": "red",
-                "de": "rot"
-              }
-            },
-            {
-              "key": "purple",
-              "label": {
-                "de": "lila",
-                "en": "purple"
-              }
-            },
-            {
-              "key": "pink",
-              "label": {
-                "de": "rosa",
-                "en": "pink"
-              }
-            },
-            {
-              "key": "orange",
-              "label": {
-                "en": "orange",
-                "de": "orange"
-              }
-            },
-            {
-              "key": "yellow",
-              "label": {
-                "en": "yellow",
-                "de": "gelb"
-              }
-            },
-            {
-              "key": "oliv",
-              "label": {
-                "en": "oliv",
-                "de": "oliv"
-              }
-            },
-            {
-              "key": "gold",
-              "label": {
-                "en": "gold",
-                "de": "gold"
-              }
-            },
-            {
-              "key": "silver",
-              "label": {
-                "en": "silver",
-                "de": "silber"
-              }
-            },
-            {
-              "key": "multicolored",
-              "label": {
-                "de": "mehrfarbig",
-                "en": "multicolored"
-              }
-            }
-          ]
-        },
-        "attributeConstraint": "None",
-        "isSearchable": true,
-        "inputHint": "SingleLine",
-        "displayGroup": "Other"
-      },
-      {
-        "name": "details",
-        "label": {
-          "de": "Details",
-          "en": "Details"
+          "en":"Filtercolor"
         },
         "isRequired": false,
         "type": {
           "name": "set",
           "elementType": {
-            "name": "ltext"
+            "name": "enum",
+            "values": [
+              {
+                "key": "dark",
+                "label": "dark"
+              },
+              {
+                "key": "light",
+                "label": "light"
+              },
+              {
+                "key": "multicolored",
+                "label":  "multicolored"
+              }
+            ]
           }
         },
         "attributeConstraint": "None",
-        "isSearchable": false,
-        "inputHint": "SingleLine",
-        "displayGroup": "Other"
-      },
-      {
-        "name": "style",
-        "label": {
-          "en": "Style",
-          "de": "Stil"
-        },
-        "isRequired": false,
-        "type": {
-          "name": "enum",
-          "values": [
-            {
-              "key": "business",
-              "label": "business"
-            },
-            {
-              "key": "sporty",
-              "label": "sporty"
-            },
-            {
-              "key": "evening",
-              "label": "evening"
-            }
-          ]
-        },
-        "attributeConstraint": "None",
-        "isSearchable": true,
-        "inputHint": "SingleLine",
-        "displayGroup": "Other"
-      },
-      {
-        "name": "gender",
-        "label": {
-          "en": "Gender",
-          "de": "Zielgruppe"
-        },
-        "isRequired": false,
-        "type": {
-          "name": "enum",
-          "values": [
-            {
-              "key": "men",
-              "label": "Herren"
-            },
-            {
-              "key": "women",
-              "label": "Damen"
-            }
-          ]
-        },
-        "attributeConstraint": "SameForAll",
-        "isSearchable": true,
-        "inputHint": "SingleLine",
-        "displayGroup": "Other"
-      },
-      {
-        "name": "sapExternalId",
-        "label": {
-          "de": "SAP External ID",
-          "en": "SAP External ID"
-        },
-        "isRequired": false,
-        "type": {
-          "name": "text"
-        },
-        "attributeConstraint": "Unique",
         "isSearchable": true,
         "inputHint": "SingleLine",
         "displayGroup": "Other"
